@@ -38,7 +38,7 @@ def convert_type_to_native(nvim_t, enable_ref_op):
         native_t = REMAP_T[nvim_t]
         return 'const ' + native_t.name + '&' if enable_ref_op and native_t.expect_ref else native_t.name
     else:
-        print "unknown nvim type name: " + str(nvim_t)
+        print("unknown nvim type name: " + str(nvim_t))
         raise InvalidType()
     
     #TODO: implement error handler
@@ -61,8 +61,8 @@ def main():
             d['return'] = convert_type_to_native(f['return_type'], False)
             d['args'] = [{'type': convert_type_to_native(arg[0], True), 'name': arg[1]} for arg in f['parameters']]
             functions.append(d)
-        except InvalidType as e:
-            print "invalid function = " + str(f)
+        except:
+            print("invalid function = " + str(f))
 
     api = tpl.render({'functions': functions})
     #print api.encode('utf-8')

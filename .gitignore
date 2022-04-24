@@ -32,3 +32,11 @@
 
 gen/
 build/
+
+# For python env file
+venv/
+
+# cpp files
+.cache/
+build/
+compile_commands.json

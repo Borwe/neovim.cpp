@@ -1,0 +1,26 @@
+{
+    "name":"neovimcpp",
+    "version-string": "0.1.0",
+    "dependencies":[
+        "boost-system",
+        "boost-coroutine",
+        "boost-context",
+        "boost-thread",
+        "boost-filesystem",
+        "boost-asio",
+        "boost-lambda",
+        "boost-variant",
+        "boost-timer"
+    ],
+    "builtin-baseline":"2ac61f87f69f0484b8044f95ab274038fbaf7bdd",
+    "overrides":[
+        {"name": "boost-system", "version":"1.79.0"},
+        {"name": "boost-coroutine", "version":"1.79.0"},
+        {"name": "boost-context", "version":"1.79.0"},
+        {"name": "boost-thread", "version":"1.79.0"},
+        {"name": "boost-lambda", "version":"1.79.0"},
+        {"name": "boost-variant", "version":"1.79.0"},
+        {"name": "boost-timer", "version":"1.79.0"},
+        {"name": "boost-filesystem", "version":"1.79.0"}
+    ]
+}
