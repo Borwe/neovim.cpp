@@ -20,8 +20,8 @@ namespace nvim {
 void Socket::connect_tcp(const std::string& host, 
                      const std::string& service, double timeout_sec)
 {
-    tcp::resolver::query query(host, service);
-    tcp::resolver::iterator iter = tcp::resolver(io_service_).resolve(query);
+    tcp::resolver::iterator iter = tcp::resolver(io_service_)
+        .resolve(host,service);
 
     deadline_.expires_from_now(boost::posix_time::seconds(int(timeout_sec)));
 
